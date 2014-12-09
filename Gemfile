@@ -28,6 +28,9 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'mysql2'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 gem 'byebug',        group: :development
 
 # Use ActiveModel has_secure_password
