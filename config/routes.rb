@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  get 'tasks/index'
+
   get 'welcome/index'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
-  root :to => "welcome#index"
+  root :to => "tasks#index"
+
+  resources :tasks
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

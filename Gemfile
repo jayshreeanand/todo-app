@@ -31,6 +31,7 @@ gem 'mysql2'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem "twitter-bootstrap-rails"
 gem 'byebug',        group: :development
 
 # Use ActiveModel has_secure_password

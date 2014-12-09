@@ -1,0 +1,21 @@
+<p>New Task</p>
+<%= form_for(@task) do |f| %>
+ <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<p>Task List</p>
+<% @tasks.each do |t| %>
+  <p>Title: <%= t.title %> </p>
+  <p>Description: <%= t.description %> </p>
+<% end %>
+<button class="btn btn-success">check</button>
