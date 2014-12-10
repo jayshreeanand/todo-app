@@ -34,6 +34,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-datepicker-rails'
+gem "best_in_place"
 gem 'byebug',        group: :development
 
 # Use ActiveModel has_secure_password

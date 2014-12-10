@@ -10,14 +10,14 @@
       <p class="text-center"><%= current_date.strftime("%A") %>
     </div>
     <div class="panel-body">
-      <ul>
+      
       <% current_tasks = @tasks[i.to_s.to_sym] %>
       <% if current_tasks.present? %>
         <% current_tasks.each do |c_task| %>
-          <li><%= c_task.title %></li>
+        <p><%= best_in_place c_task, :title, :type => :input, value: c_task.title %></p>
         <% end %>
       <% end %> 
-    </ul>
+    
     </div>
   </div>
 </div>
