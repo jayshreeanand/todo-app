@@ -9,7 +9,8 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ *  
+ *= require bootstrap-datepicker3
  *= require_tree .
  *= require_self
  */
@@ -52,7 +53,9 @@
 
 .profile-name {
   font-weight: bold;
-  margin: 10 10 10 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-right: 20px;
 }
 
 .new-task {
@@ -61,7 +64,23 @@
   margin-right: 50px;
 }
 
+.date-move-icon {
+ height: 50px;
+  width: 50px;
+  color: white;
+  border-radius: 10px;
+  background-color: #00aced;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 40px;
+ 
+}
+.datepicker{z-index:1151 !important;}
 
+.task-pane {
+
+  height: 300px;
+}
 .form-signin {
   max-width: 330px;
   padding: 15px;
@@ -156,4 +175,9 @@
 }
 .main .page-header {
   margin-top: 0;
+}
+
+.main-panel {
+
+margin-top: 70px;
 }

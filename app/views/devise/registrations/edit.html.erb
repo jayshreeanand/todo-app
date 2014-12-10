@@ -26,7 +26,10 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
-
+  <div class="field">
+    <%= f.time_zone_select :time_zone, nil, {default: "Pacific Time (US & Canada)"}, {:class =>"btn btn-default dropdown-toggle"}  %>
+  </div>
+  </br>
   <div class="actions">
     <%= f.submit "Update" %>
   </div>

@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   root :to => "tasks#index"
 
-  resources :tasks
+  resources :tasks do
+    collection do
+      post :get_tasks_in_date_range
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

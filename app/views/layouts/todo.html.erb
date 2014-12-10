@@ -8,7 +8,7 @@
 </head>
 <body>
 <!-- Fixed navbar -->
-  <nav class="navbar navbar-default" role="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">ToDo App</a>
@@ -34,13 +34,8 @@
     </div>
   </nav>
 
-  <div class="container-fluid">
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-       <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+  <div class="container-fluid main-panel">
+    
     <div class="row">
       <%= render :partial=>"new_task"%>
       <div class="col-sm-3 col-md-2 sidebar">
@@ -52,6 +47,12 @@
         </ul>
       </div>
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+           <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
         <%= yield %>
       </div>
     </div>
