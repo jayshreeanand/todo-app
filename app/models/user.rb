@@ -12,12 +12,14 @@ class User < ActiveRecord::Base
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
         user.provider = auth.provider
         user.uid = auth.uid
-        if auth.provider = "twitter"
+        if auth.provider == "twitter"
           user.email = "#{auth.info.nickname}@twitter.com"
         else
           user.email = auth.info.email
         end
+        user.name = auth.info.name
         user.password = Devise.friendly_token[0,20]
+        user.avatar = auth.info.image
       end
   end
 
