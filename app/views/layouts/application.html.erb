@@ -7,27 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- Fixed navbar -->
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">ToDo App</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse pull-right">
+        <ul class="nav navbar-nav">
+          </ul>
+      </div><!--/.nav-collapse -->
 
-<p class="navbar-text pull-right">
-<% if user_signed_in? %>
-  <%= image_tag(current_user.avatar, size: "50") %>
-  Logged in as <strong><%= current_user.name || current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
+    </div>
+  </nav>
 
-
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-
-<%= yield %>
-
+  <div class="container-fluid">
+    <% if notice %>
+      <p class="alert alert-success col-md-4 col-md-offset-4"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+       <p class="alert alert-danger col-md-4 col-md-offset-4"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+  </div> <!-- /container -->
 </body>
 </html>

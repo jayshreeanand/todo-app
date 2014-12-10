@@ -1,0 +1,30 @@
+<%= button_tag "New Task", class: "btn btn-success", data: {toggle: "modal", target: "#new-task-form"} %>
+
+<!-- Modal -->
+<div class="modal fade" id="new-task-form" tabindex="-1" role="dialog" aria-labelledby="new-task-form-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="new-task-form-label">Create a New Task</h4>
+      </div>
+      <% @task = current_user.tasks.new %>
+      <%= form_for(@task) do |f| %>
+        <div class="modal-body">
+           <p>
+              <%= f.label :title, class: "sr-only" %><br>
+              <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
+            </p>
+            <p>
+              <%= f.label :description, class: "sr-only" %><br>
+              <%= f.text_area :description, class: "form-control", placeholder: "Description" %>
+            </p>
+        </div>
+        <div class="modal-footer">
+           <%= button_tag "Cancel", class: "btn btn-danger", data: {dismiss: "modal"} %>
+           <%= f.submit "Create", class: "btn btn-success" %>
+        </div>
+      <% end %> 
+    </div>
+  </div>
+</div>

@@ -1,16 +1,15 @@
 class TasksController < ApplicationController
-
+  layout 'todo'
+  
   def index
     @tasks = current_user.tasks
     @task = Task.new
   end
 
   def create
-    @task = Task.new(task_params)
     @task.user = current_user
-
     if @task.save
-      redirect_to @task, notice: 'Task was successfully created'
+      redirect_to({action: 'index'}, notice: 'Task was successfully created')
     end
   end
 
