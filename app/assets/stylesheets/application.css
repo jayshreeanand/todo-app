@@ -184,3 +184,12 @@ margin-top: 70px;
 
 /*Tasks List*/
 
+.task-item-line {
+  border-bottom: 1px dotted #aaa;
+  
+}
+
+.new-task {
+
+  color: #8d8d8d;
+}
