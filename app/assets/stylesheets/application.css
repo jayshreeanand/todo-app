@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+.social {
+
+  height: 50px;
+  width: 50px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  top: 12px;
+  font-size: 40px;
+  padding-top: 5px;
+}
+
+.login-twitter {
+
+  background-color: #00aced;
+}
+
+.login-facebook {
+  background-color: #3b5998;
+}
+
+.login-google {
+  background-color: #dd4b39;
+}
