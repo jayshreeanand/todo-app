@@ -261,6 +261,9 @@ Devise.setup do |config|
   #Add your ID and secret here
   #ID first, secret second
   config.omniauth :twitter, "kSBohBCS8iv45w4SyISsZc42X", "rmoEvo16nNGRrOug6Ps03Eu8gRQXaP6tjTgX7EEHo9jjgkvWJ4"
+  config.omniauth :facebook, "402741319873324", "d51e5c3946b1f973afb9c8bb6fc9a782"
+  config.omniauth :google_oauth2, "1058018800453-j780s2liivr3utbca37kc4o61sve1pci.apps.googleusercontent.com", "mNTTYwlgrQpNaxRv60tdc9Im"
+
 
 
 end
